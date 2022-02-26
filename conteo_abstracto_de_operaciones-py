@@ -1,0 +1,28 @@
+from re import X
+#se importa "X" el cual es un valor que tine un rango del 0 al 63 o 64 (todavia no es especifico)
+
+def f(x):
+
+    respuesta = 0
+
+    for i in range(1000):
+        respuesta += 1
+        #a respuesta se le suma 1 por cada vulta del ciclo for 
+
+    for i in range(x): #como x tine un rango del 0 al 63 el ciclo se repite 63 veces
+        respuesta += x #respuesta va a ser igual a x y se guarda en cada vuelta del ciclo ej: 1000 + 64 _ 1064 + 64 etc..
+        
+        
+    for i in range(x): #este ciclo se va a ejecutar un total de 64 veces 
+        print( "i", respuesta )
+        for j in range(x): #este ciclo se va a ejecutar un total de 64 x 64 veces
+            respuesta += 1
+            respuesta += 1
+            
+            print("j", respuesta)
+            
+    return respuesta
+    
+
+if __name__ == "__main__":
+    print(f(X)) #para el final darnos un valor de 13288
