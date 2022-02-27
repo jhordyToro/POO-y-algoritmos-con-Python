@@ -24,7 +24,7 @@ if __name__ == '__main__':
     factorial(n)
     final = time.time()
     print(final - comienzo)
-
+   
     comienzo = time.time()
     factorial_r(n)
     final = time.time()
